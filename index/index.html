@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        *{
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background: #000;
+        }
+        .animation-box{
+            width: 800px;
+            height: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        .nav{
+
+            color: #fff;
+            line-height: 248px;
+            text-align: right;
+
+        }
+
+    </style>
+    <script src="jquery.min.js"></script>
+
+</head>
+<body>
+<div class="animation-box">
+    <div class="start">
+        <p class="word">星环创世</p>
+        <p class="button">START</p>
+    </div>
+    <div class="circle-middle">
+        <div class="satellite-wrap">
+            <i class="satellite"></i>
+        </div>
+        <div class="nav">
+            <p>公司简介</p>
+            <div>
+                content
+            </div>
+        </div>
+    </div>
+    <div class="circle-big"><div class="satellite-wrap"><i class="satellite"></i></div></div>
+</div>
+<script>
+    $(function () {
+
+        $(".start .button").click(function () {
+            setTimeout(function(){
+                var start=$(".start");
+                start.addClass("start-greater");
+                start.removeClass("start");
+
+            },0);
+
+
+            setTimeout(function(){
+                var middleCircle=$(".circle-middle");
+                middleCircle.addClass("circle-middle-greater");
+                // middleCircle.removeClass("circle-middle");
+
+            },150);
+
+            setTimeout(function(){
+                var bigCircle=$(".circle-big");
+                bigCircle.addClass("circle-big-greater")
+                // bigCircle.removeClass("circle-big");
+            },300);
+
+        })
+
+
+
+    })
+</script>
+</body>
+</html>

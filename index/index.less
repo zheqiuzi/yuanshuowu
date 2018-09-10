@@ -1,0 +1,161 @@
+*{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  background: #000;
+}
+.animation-box{
+
+}
+
+
+@animation-box-width:800px;
+@animation-box-height:800px;
+
+.circle(@width,@height,@borderWidth,@borderStyle,@borderColor,@animationName,@animationTime){
+  width: @width;
+  height: @height;
+  display: block;
+  position: absolute;
+  border-radius: @width/2;
+  border: @borderWidth @borderStyle @borderColor;
+
+  left: @animation-box-width/2;
+  top: @animation-box-height/2;
+  margin-top: -@width/2;
+  margin-left:-@height/2;
+  transition: all 0.5s ease-out	;
+  //
+
+  .satellite-wrap{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    width: 0px;
+    height: 0px;
+    transition: all 0.5s ease-out	;
+    -webkit-animation: @animationName @animationTime linear infinite;
+    /*-webkit-animation-iteration-count:3;*/
+    .satellite{
+      position: relative;
+      width: 20px;
+      height: 20px;
+      left: @width/2;
+      background: #fff;
+      display: block;
+      border-radius: 10px;
+      margin-left: -10px;
+      margin-top: -10px;
+      transition: all 0.5s ease-out	;
+    }
+  }
+}
+
+
+.center-point{
+  left:0px !important;
+}
+
+
+@keyframes satellite_rotate_animation
+{
+  0% {transform: rotate(0deg)}
+  25% {transform: rotate(90deg)}
+  50% {transform: rotate(180deg)}
+  75% {transform: rotate(270deg)}
+  100% {transform: rotate(360deg)}
+}
+@keyframes _satellite_rotate_animation
+{
+  0% {transform: rotate(0deg)}
+  25% {transform: rotate(-90deg)}
+  50% {transform: rotate(-180deg)}
+  75% {transform: rotate(-270deg)}
+  100% {transform: rotate(-360deg)}
+}
+
+.start{
+  position: absolute !important;
+  width: 156px;
+  height: 156px;
+  left: @animation-box-width/2;
+  top: @animation-box-height/2;
+  margin-top: -78px;
+  margin-left: -78px;
+  border: 2px solid #272727;
+  border-radius: 78px;
+  color: #fff;
+  line-height: 156px;
+  text-align: center;
+  z-index: 999;
+  transition: background-color 0.5s ease-out;
+  cursor: pointer;
+}
+.start:hover{
+  background: #fff;
+  color: #000;
+}
+.start p{
+  display: none;
+}
+
+.start{
+  .word{
+    display: block;
+  }
+  &:hover{
+    .button{
+      display: block;
+    }
+    .word{
+      display: none;
+    }
+  }
+
+}
+
+.start-greater{
+  position: absolute !important;
+  width: 310px;
+  height: 310px;
+  left: @animation-box-width/2;
+  top: @animation-box-height/2;
+  margin-top: -155px;
+  margin-left: -155px;
+  border: 2px dashed #272727;
+  border-radius: 155px;
+  color: #fff;
+  line-height: 310px;
+  text-align: center;
+  transition: all 0.5s ease-out	;
+  p{
+    display: none !important;
+  }
+}
+
+.circle-middle{
+  .circle(248px,248px,1.5px,solid,#272727,_satellite_rotate_animation,20s);
+}
+.circle-middle-greater{
+  .circle(462px,462px,1.5px,dashed,#272727,_satellite_rotate_animation,20s);
+  .satellite-wrap .satellite{
+    left: 0px !important;
+    background-color: #f9d010 !important;
+    box-shadow: 0px 0px 15px 6px rgba(249,208,0,0.5);
+  }
+}
+
+.circle-big{
+  .circle(334px,334px,1px,solid,#272727,satellite_rotate_animation,10s);
+}
+.circle-big-greater{
+  .circle(710px,710px,1px,dashed,#272727,satellite_rotate_animation,10s);
+  .satellite-wrap .satellite{
+    left: 0px !important;
+    background-color: #f9d010 !important;
+    box-shadow: 0px 0px 15px 6px rgba(249,208,0,0.5);
+  }
+}
