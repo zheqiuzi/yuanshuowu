@@ -21,12 +21,20 @@
             margin: auto;
         }
 
-        .nav{
-
+        .circle-middle-nav{
             color: #fff;
-            line-height: 248px;
             text-align: right;
+            height: 20px;
+            position: relative;
+            top: 0px;
+            display: none;
+            transition: all 0.5s ease-out;
+        }
 
+        .circle-middle-greater .circle-middle-nav{
+            top: 221px;
+            display: block;
+            transition: all 0.5s ease-out;
         }
 
     </style>
@@ -43,7 +51,7 @@
         <div class="satellite-wrap">
             <i class="satellite"></i>
         </div>
-        <div class="nav">
+        <div class="circle-middle-nav">
             <p>公司简介</p>
             <div>
                 content
