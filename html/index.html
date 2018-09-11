@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>星环</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link href="css/index_style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<style>
+		body{
+			font-size:1em;
+		}
+		body svg{
+			display: none;
+		}
+		.section { text-align: center; font: 30px "Microsoft Yahei"; color: #fff;}
+		#Ellipse{
+			position:relative;
+			visibility:visible;
+			z-index:1;
+			width:60%;
+			margin-top: 10rem;
+			border:none;
+
+		}
+		.RotatingIcon{
+			border:none;
+			width:5rem;
+		}
+		.section p{margin: 0}
+		.boottomP{margin-top: 20rem !important;font-size: 1rem}
+		@media screen and (max-width: 883px) {
+			.boottomP {
+				margin-top: 25rem !important;
+			}
+		}
+		@media screen and (max-width: 433px) {
+			.boottomP {
+				margin-top: 30rem !important;
+			}
+		}
+	.pubIcon{width: 50%}
+	</style>
+	<style>
+		*{
+			margin: 0px;
+			border: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			background: #000;
+		}
+		.animation-box{
+			width: 800px;
+			height: 800px;
+			position: absolute;
+			margin: auto;
+		}
+
+		.circle-nav{
+			position: absolute;
+			left: -70px;
+			right: -70px;
+			color: #fff;
+			text-align: right;
+			height: 20px;
+			display: none;
+			transition: all 0.5s ease-out;
+
+			line-height: 22px;
+		}
+		.circle-nav .title{
+			display: inline-block;
+			cursor: pointer;
+		}
+		.circle-nav .content{
+			display: none;
+		}
+		.t-left{
+			text-align: left;
+		}
+
+		.circle-nav .content{
+			padding: 10px 30px;
+		}
+		.circle-nav .content p{
+			padding: 10px 0px;
+			text-align: left;
+			font-size: 14px;
+			line-height: 22px;
+		}
+		.circle-nav .content .header{
+			border-bottom: 1px solid #717171;
+			padding: 10px 0px;
+		}
+		.circle-nav .close{
+			padding: 0px 4px;
+			cursor: pointer;
+		}
+		.circle-nav .close:hover{
+			transform: scale(1.25);
+		}
+
+
+		.start-greater .circle-nav{
+			top: 145px;
+			display: block;
+
+		}
+
+		.circle-middle-greater .circle-nav{
+			right: -96px;
+			top: 221px;
+			display: block;
+		}
+		.circle-big-greater .circle-nav{
+			right: -92px;
+			top: 345px;
+			display: block;
+		}
+
+
+		.top-word{
+			position: absolute;
+			top: -95px;
+			color: #fff;
+			text-align: center;
+			width: 334px;
+		}
+
+		.top-word .title{
+			position: relative;
+			color: #4c4c4c;
+			font-size: 16px;
+			margin-bottom: 10px;
+			transition: all 0.5s ease-out;
+		}
+
+		.top-word .subtitle{
+			color: #7f8380;
+			font-size: 14px;
+		}
+
+		.circle-big-greater .top-word{
+			position: relative;
+			width: 710px;
+			transition: all 0.5s ease-out	;
+		}
+
+
+
+
+
+		@keyframes myfirst
+		{
+			from  {transform: rotate(0deg)}
+			to {
+				transform: rotate(70deg);
+				left: 150px;
+				top: -200px;
+				display: none;
+
+			}
+		}
+
+
+
+		.circle-big-greater .top-word .title
+		{
+			/*animation: myfirst 10s 1;*/
+			/*animation-fill-mode : forwards;*/
+
+
+			/*left: 150px;*/
+			/*top: -200px;*/
+			/*display: none;*/
+			/*transition: all 0.5s ease-out	;*/
+		}
+
+	</style>
+	<link rel="stylesheet" href="../index/appui.css">
+	<link rel="stylesheet" href="../index/index.css">
+
+	<!--[if IE]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+
+<body onLoad="InitScripts()">
+<div id="dowebok">
+
+	<div class="section">
+
+		<div class="header" id="demo">
+			<div class="top_logo">S T A R T H A L O</div>
+
+			<div class="canvaszz"> </div>
+			<canvas id="canvas"></canvas>
+		</div>
+
+
+		<div class="animation-box">
+
+			<div class="start">
+				<p class="word">星环创世</p>
+				<p class="button">START</p>
+
+				<div class="circle-nav">
+					<p class="title">公司简介</p>
+					<div class="content">
+						<div class="cell header">
+							<div class="cell-bd t-left">公司介绍</div>
+							<div class="cell-ft close">x</div>
+						</div>
+						<p>
+							星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="circle-middle">
+				<div class="satellite-wrap">
+					<i class="satellite"></i>
+				</div>
+				<div class="circle-nav">
+					<p class="title">公司简介</p>
+					<div class="content">
+						<div class="cell header">
+							<div class="cell-bd t-left">公司介绍</div>
+							<div class="cell-ft close">x</div>
+						</div>
+						<p>
+							星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="circle-big">
+
+				<div class="top-word">
+					<p class="title">通 证 经 济 与 共 识 社 群 践 行 者</p>
+					<p class="subtitle">STARTHALO</p>
+				</div>
+
+				<div class="satellite-wrap"><i class="satellite"></i></div>
+				<div class="circle-nav">
+					<p class="title">公司简介</p>
+					<div class="content">
+						<div class="cell header">
+							<div class="cell-bd t-left">公司介绍</div>
+							<div class="cell-ft close">x</div>
+						</div>
+						<p>
+							星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="section" >
+        <p style="font-size: 2rem;margin-top: 1%">产品业务</p>
+		<p style="font-size: 1rem; margin-top: 20px">主要产品业务</p>
+		<div id="Ellipse">
+			<img class="RotatingIcon"  src="images/guwen.png">
+			<img class="RotatingIcon"  src="images/luntan.png">
+			<img class="RotatingIcon"  src="images/peixun.png">
+			<img class="RotatingIcon"  src="images/yanjiu.png">
+			<img class="RotatingIcon"  src="images/yunying.png">
+			<img class="RotatingIcon"  src="images/pingtai.png">
+
+		</div>
+		<p class="boottomP" >区块链为技术基础的内容传播平台</p>
+		<p style="margin-top: 1.5rem;font-size: 1rem">即时通信社群管理平台、个人数据银行工具、数字资产管理工具、原创内容平台</p>
+		<p style="margin-top: 1rem;font-size: 1rem">以建立和运营自媒体内容矩阵,如通证派元道,星环财经</p>
+
+	</div>
+	<div class="section">
+		<p style="font-size: 2rem;margin-top: 1%">商业模式</p>
+		<p style="font-size: 1rem; margin-top: 20px">通过建立token+社区的DCO模式</p>
+		<img style="width: 100%;margin-top: 5%" src="images/phone.gif">
+		<p style="margin-top: 1.5rem;font-size: 1rem">依托区块链技术为基础的分布式即时通信和媒体平台, 实现分布式内容存储、数据</p>
+		<p style="margin-top: 1rem;font-size: 1rem">存储与确权，最终实现个人数据资产变现</p>
+	</div>
+	<div class="section">
+		<div style="display: flex;flex-direction: row;justify-content: center;background: black">
+			<div>
+				<img class="pubIcon" src="images/pub.png">
+				<p style="font-size: 1rem">公众号</p>
+			</div>
+			<div>
+				<img class="pubIcon" src="images/kefu.png">
+				<p style="font-size: 1rem">咨询</p>
+			</div>
+		</div>
+
+
+		<div style="width: 100%;height: 100px;background: white;position: absolute;bottom: 0px;">
+			<div style="display: flex;justify-content: space-between;align-items: center;height: 100%">
+				<img style="width: 10%;;margin-left: 10%" src="images/logo3@.png">
+				<span style="color: black;margin-right: 10%">STARHALO</span>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/ImageRotator-min.js"></script>
+<script type="text/javascript">
+    var imageRotater = null;
+    function InitScripts(){
+        imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',1,110,1000, 0, 90, 0, null);
+    }
+</script>
+<script>
+
+    $(function(){
+        $('#dowebok').fullpage({
+            sectionsColor : ['#000', '#000', '#000', '#000']
+        });
+
+        $(window).resize(function(){
+            autoScrolling();
+        });
+
+        function autoScrolling(){
+            var $ww = $(window).width();
+            if($ww < 1024){
+                $.fn.fullpage.setAutoScrolling(false);
+            } else {
+                $.fn.fullpage.setAutoScrolling(true);
+            }
+        }
+
+        autoScrolling();
+    });
+
+    //宇宙特效
+    "use strict";
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        w = canvas.width = window.innerWidth,
+        h = canvas.height = window.innerHeight,
+
+        hue = 217,
+        stars = [],
+        count = 0,
+        maxStars = 1300;//星星数量
+
+    var canvas2 = document.createElement('canvas'),
+        ctx2 = canvas2.getContext('2d');
+    canvas2.width = 100;
+    canvas2.height = 100;
+    var half = canvas2.width / 2,
+        gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+    gradient2.addColorStop(0.025, '#CCC');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+    gradient2.addColorStop(1, 'transparent');
+
+    ctx2.fillStyle = gradient2;
+    ctx2.beginPath();
+    ctx2.arc(half, half, half, 0, Math.PI * 2);
+    ctx2.fill();
+
+    // End cache
+
+    function random(min, max) {
+        if (arguments.length < 2) {
+            max = min;
+            min = 0;
+        }
+
+        if (min > max) {
+            var hold = max;
+            max = min;
+            min = hold;
+        }
+
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function maxOrbit(x, y) {
+        var max = Math.max(x, y),
+            diameter = Math.round(Math.sqrt(max * max + max * max));
+        return diameter / 2;
+        //星星移动范围，值越大范围越小，
+    }
+
+    var Star = function() {
+
+        this.orbitRadius = random(maxOrbit(w, h));
+        this.radius = random(60, this.orbitRadius) / 8;
+        //星星大小
+        this.orbitX = w / 2;
+        this.orbitY = h / 2;
+        this.timePassed = random(0, maxStars);
+        this.speed = random(this.orbitRadius) / 50000;
+        //星星移动速度
+        this.alpha = random(2, 10) / 10;
+
+        count++;
+        stars[count] = this;
+    }
+
+    Star.prototype.draw = function() {
+        var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+            y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+            twinkle = random(10);
+
+        if (twinkle === 1 && this.alpha > 0) {
+            this.alpha -= 0.05;
+        } else if (twinkle === 2 && this.alpha < 1) {
+            this.alpha += 0.05;
+        }
+
+        ctx.globalAlpha = this.alpha;
+        ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+        this.timePassed += this.speed;
+    }
+
+    for (var i = 0; i < maxStars; i++) {
+        new Star();
+    }
+
+    function animation() {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = 0.5; //尾巴
+        ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
+        ctx.fillRect(0, 0, w, h)
+
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+            stars[i].draw();
+        };
+
+        window.requestAnimationFrame(animation);
+    }
+
+    animation();
+
+
+
+</script>
+
+<script>
+    $(function () {
+
+        $(".start .button").click(function () {
+            setTimeout(function(){
+                var start=$(".start");
+                start.addClass("start-greater");
+                start.removeClass("start");
+
+            },0);
+
+
+            setTimeout(function(){
+                var middleCircle=$(".circle-middle");
+                middleCircle.addClass("circle-middle-greater");
+                // middleCircle.removeClass("circle-middle");
+
+            },150);
+
+            setTimeout(function(){
+                var bigCircle=$(".circle-big");
+                bigCircle.addClass("circle-big-greater")
+                // bigCircle.removeClass("circle-big");
+            },300);
+
+        })
+
+        $(".circle-nav p").click(function () {
+            $(".circle-nav .content").fadeOut();
+            $(this).siblings().fadeIn()
+        });
+
+        $(".circle-nav .close").click(function () {
+            $(".circle-nav .content").fadeOut();
+        });
+
+        var resetLayout=function () {
+            var h=$(window).height();
+            var w=$(window).width();
+            var top=(h-800)/2;
+            var left=(w-800)/2;
+            $(".animation-box").css({"top":top,"left":left})
+        }
+
+        resetLayout();
+        $(window).resize(resetLayout)
+
+
+    })
+</script>
+
+</body>
+</html>
