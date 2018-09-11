@@ -64,6 +64,7 @@ body {
 .start:hover {
   background: #fff;
   color: #000;
+  transform: scale(1.015);
 }
 .start p {
   display: none;
@@ -91,9 +92,13 @@ body {
   line-height: 310px;
   text-align: center;
   transition: all 0.5s ease-out;
+  z-index: 999;
 }
-.start-greater p {
+.start-greater > p {
   display: none !important;
+}
+.start-greater:hover {
+  transform: scale(1.015);
 }
 .circle-middle {
   width: 248px;
@@ -107,6 +112,10 @@ body {
   margin-top: -124px;
   margin-left: -124px;
   transition: all 0.5s ease-out;
+  z-index: 998;
+}
+.circle-middle:hover {
+  transform: scale(1.015);
 }
 .circle-middle .satellite-wrap {
   position: absolute;
@@ -115,8 +124,8 @@ body {
   width: 0px;
   height: 0px;
   transition: all 0.5s ease-out;
-  -webkit-animation: _satellite_rotate_animation 20s linear infinite;
-  /*-webkit-animation-iteration-count:3;*/
+  animation: _satellite_rotate_animation 20s linear infinite;
+  /*animation-iteration-count:3;*/
 }
 .circle-middle .satellite-wrap .satellite {
   position: relative;
@@ -143,6 +152,10 @@ body {
   margin-top: -231px;
   margin-left: -231px;
   transition: all 0.5s ease-out;
+  z-index: 998;
+}
+.circle-middle-greater:hover {
+  transform: scale(1.015);
 }
 .circle-middle-greater .satellite-wrap {
   position: absolute;
@@ -151,8 +164,8 @@ body {
   width: 0px;
   height: 0px;
   transition: all 0.5s ease-out;
-  -webkit-animation: _satellite_rotate_animation 20s linear infinite;
-  /*-webkit-animation-iteration-count:3;*/
+  animation: _satellite_rotate_animation 20s linear infinite;
+  /*animation-iteration-count:3;*/
 }
 .circle-middle-greater .satellite-wrap .satellite {
   position: relative;
@@ -184,6 +197,10 @@ body {
   margin-top: -167px;
   margin-left: -167px;
   transition: all 0.5s ease-out;
+  z-index: 997;
+}
+.circle-big:hover {
+  transform: scale(1.015);
 }
 .circle-big .satellite-wrap {
   position: absolute;
@@ -192,8 +209,8 @@ body {
   width: 0px;
   height: 0px;
   transition: all 0.5s ease-out;
-  -webkit-animation: satellite_rotate_animation 10s linear infinite;
-  /*-webkit-animation-iteration-count:3;*/
+  animation: satellite_rotate_animation 10s linear infinite;
+  /*animation-iteration-count:3;*/
 }
 .circle-big .satellite-wrap .satellite {
   position: relative;
@@ -220,6 +237,10 @@ body {
   margin-top: -355px;
   margin-left: -355px;
   transition: all 0.5s ease-out;
+  z-index: 997;
+}
+.circle-big-greater:hover {
+  transform: scale(1.015);
 }
 .circle-big-greater .satellite-wrap {
   position: absolute;
@@ -228,8 +249,8 @@ body {
   width: 0px;
   height: 0px;
   transition: all 0.5s ease-out;
-  -webkit-animation: satellite_rotate_animation 10s linear infinite;
-  /*-webkit-animation-iteration-count:3;*/
+  animation: satellite_rotate_animation 10s linear infinite;
+  /*animation-iteration-count:3;*/
 }
 .circle-big-greater .satellite-wrap .satellite {
   position: relative;

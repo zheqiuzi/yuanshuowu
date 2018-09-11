@@ -28,8 +28,9 @@ body{
   margin-top: -@width/2;
   margin-left:-@height/2;
   transition: all 0.5s ease-out	;
-  //
-
+  &:hover{
+    transform: scale(1.015);
+  }
   .satellite-wrap{
     position: absolute;
     left:50%;
@@ -37,8 +38,8 @@ body{
     width: 0px;
     height: 0px;
     transition: all 0.5s ease-out	;
-    -webkit-animation: @animationName @animationTime linear infinite;
-    /*-webkit-animation-iteration-count:3;*/
+    animation: @animationName @animationTime linear infinite;
+    /*animation-iteration-count:3;*/
     .satellite{
       position: relative;
       width: 20px;
@@ -98,6 +99,7 @@ body{
 .start:hover{
   background: #fff;
   color: #000;
+  transform: scale(1.015);
 }
 .start p{
   display: none;
@@ -132,16 +134,22 @@ body{
   line-height: 310px;
   text-align: center;
   transition: all 0.5s ease-out	;
-  p{
+  z-index: 999;
+  >p{
     display: none !important;
+  }
+  &:hover{
+    transform: scale(1.015);
   }
 }
 
 .circle-middle{
   .circle(248px,248px,1.5px,solid,#272727,_satellite_rotate_animation,20s);
+  z-index: 998;
 }
 .circle-middle-greater{
   .circle(462px,462px,1.5px,dashed,#272727,_satellite_rotate_animation,20s);
+  z-index: 998;
   .satellite-wrap .satellite{
     left: 0px !important;
     background-color: #f9d010 !important;
@@ -151,9 +159,11 @@ body{
 
 .circle-big{
   .circle(334px,334px,1px,solid,#272727,satellite_rotate_animation,10s);
+  z-index: 997;
 }
 .circle-big-greater{
   .circle(710px,710px,1px,dashed,#272727,satellite_rotate_animation,10s);
+  z-index: 997;
   .satellite-wrap .satellite{
     left: 0px !important;
     background-color: #f9d010 !important;
