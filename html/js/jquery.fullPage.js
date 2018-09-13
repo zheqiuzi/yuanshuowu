@@ -913,31 +913,57 @@
 		/**
 		* Performs the movement (by CSS3 or by jQuery)
 		*/
-		function performMovement(v){
-			// using CSS3 translate functionality
-			if (options.css3 && options.autoScrolling && !options.scrollBar) {
+		// function performMovement(v){
+		// 	// using CSS3 translate functionality
+		// 	if (options.css3 && options.autoScrolling && !options.scrollBar) {
+        //
+		// 		var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
+		// 		transformContainer(translate3d, true);
+        //
+		// 		setTimeout(function () {
+		// 			afterSectionLoads(v);
+		// 		}, options.scrollingSpeed);
+		// 	}
+        //
+		// 	// using jQuery animate
+		// 	else{
+		// 		var scrollSettings = getScrollSettings(v);
+        //
+		// 		$(scrollSettings.element).animate(
+		// 			scrollSettings.options
+		// 		, options.scrollingSpeed, options.easing).promise().done(function () { //only one single callback in case of animating  `html, body`
+		// 			afterSectionLoads(v);
+		// 		});
+		// 	}
+		// }
 
-				var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
-				transformContainer(translate3d, true);
+        function performMovement(v){
+            // using CSS3 translate functionality
+            if (options.css3 && options.autoScrolling && !options.scrollBar) {
+                if (v.anchorLink == 'section-3'){ //当滚屏到最后一屏时间
+                    footer_a = $('#nextS').height();//倒数第二屏的高度
+                    footer_h = $('#footer').height();  //footer的高度
+                    var translate3d = 'translate3d(0px, -' + (v.dtop - footer_a + footer_h) + 'px, 0px)';
+                }else{
+                    var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
+                }
+                transformContainer(translate3d, true);
+                setTimeout(function () {
+                    afterSectionLoads(v);
+                }, options.scrollingSpeed);
+            }
+            // using jQuery animate
+            else{
+                var scrollSettings = getScrollSettings(v);
+                $(scrollSettings.element).animate(
+                    scrollSettings.options
+                    , options.scrollingSpeed, options.easing).promise().done(function () { //only one single callback in case of animating  `html, body`
+                    afterSectionLoads(v);
+                });
+            }
+        }
 
-				setTimeout(function () {
-					afterSectionLoads(v);
-				}, options.scrollingSpeed);
-			}
-
-			// using jQuery animate
-			else{
-				var scrollSettings = getScrollSettings(v);
-
-				$(scrollSettings.element).animate(
-					scrollSettings.options
-				, options.scrollingSpeed, options.easing).promise().done(function () { //only one single callback in case of animating  `html, body`
-					afterSectionLoads(v);
-				});
-			}
-		}
-
-		/**
+        /**
 		* Gets the scrolling settings depending on the plugin autoScrolling option
 		*/
 		function getScrollSettings(v){
