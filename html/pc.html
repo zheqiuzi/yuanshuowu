@@ -44,6 +44,7 @@
         .circle-nav .title{
             display: inline-block;
             cursor: pointer;
+            font-size: 1.4rem;
         }
         .circle-nav .content{
             display: none;
@@ -64,6 +65,7 @@
         .circle-nav .content .header{
             border-bottom: 1px solid #717171;
             padding: 10px 0px;
+            font-size: 1.4rem;
         }
         .circle-nav .close{
             padding: 0px 4px;
@@ -595,10 +597,12 @@
         $(window).resize(resetLayout)
 
         //显示文字
-        // $(".animation-box >p").fadeIn(1000,function () {
-        //     $(".animation-box >p").hide(1000);
-        //     $(".animation-box >div").show(1000)
-        // })
+        $(".animation-box >p").fadeIn(2000,function () {
+            $(".animation-box >p").fadeOut(2000);
+            $(".animation-box >div").css({"overflow":"visible"});
+            $(".animation-box >div").fadeIn(2000);
+        })
+
 
 
     })
