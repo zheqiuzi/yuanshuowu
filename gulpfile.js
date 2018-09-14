@@ -3,11 +3,11 @@ var less=require("gulp-less");
 var watch=require("gulp-watch");
 
 gulp.task("less",function () {
-    gulp.src("index/*.less")
+    gulp.src("html/less/*.less")
         .pipe(less())
-        .pipe(gulp.dest('index/'))
+        .pipe(gulp.dest('html/css/'))
 })
 
 gulp.task("watch",function () {
-    gulp.watch("index/*.less",['less'])
+    gulp.watch("html/less/*.less",['less'])
 })

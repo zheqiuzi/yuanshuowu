@@ -1,333 +1,423 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>星环</title>
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
-	<link href="css/index_style.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<!--<link rel="stylesheet" type="text/css" href="css/demo.css">-->
-	<style>
-
-		body{
-			font-size:1em;
-		}
-		body svg{
-			display: none;
-		}
-		/*.section { text-align: center; font: 30px "Microsoft Yahei"; color: #fff;}*/
-		#Ellipse{
-			position:relative;
-			visibility:visible;
-			z-index:1;
-			width:500px;
-			margin-top: 10rem;
-			border:none;
-
-		}
-		.RotatingIcon{
-			border:none;
-			width:5rem;
-		}
-		.section p{margin: 0}
-		.boottomP{margin-top: 20rem !important;font-size: 1rem}
-		@media screen and (max-width: 883px) {
-			.boottomP {
-				margin-top: 25rem !important;
-			}
-		}
-		@media screen and (max-width: 433px) {
-			.boottomP {
-				margin-top: 30rem !important;
-			}
-		}
-	.pubIcon{width: 50%}
-	</style>
-	<style>
-		*{
-			margin: 0px;
-			border: 0px;
-			padding: 0px;
-			box-sizing: border-box;
-		}
-		body{
-			background: #000;
-		}
-		.animation-box{
-			width: 800px;
-			height: 800px;
-			position: absolute;
-			margin: auto;
-		}
-
-		.circle-nav{
-			position: absolute;
-			left: -70px;
-			right: -70px;
-			color: #fff;
-			text-align: right;
-			height: 20px;
-			display: none;
-			transition: all 0.5s ease-out;
-
-			line-height: 22px;
-		}
-		.circle-nav .title{
-			display: inline-block;
-			cursor: pointer;
-		}
-		.circle-nav .content{
-			display: none;
-		}
-		.t-left{
-			text-align: left;
-		}
-
-		.circle-nav .content{
-			padding: 10px 30px;
-		}
-		.circle-nav .content p{
-			padding: 10px 0px;
-			text-align: left;
-			font-size: 14px;
-			line-height: 22px;
-		}
-		.circle-nav .content .header{
-			border-bottom: 1px solid #717171;
-			padding: 10px 0px;
-		}
-		.circle-nav .close{
-			padding: 0px 4px;
-			cursor: pointer;
-		}
-		.circle-nav .close:hover{
-			transform: scale(1.25);
-		}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星环</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link href="css/index_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <style>
+        *{
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            background: #000;
+        }
 
 
-		.start-greater .circle-nav{
-			top: 145px;
-			display: block;
+        .circle-nav{
+            position: absolute;
+            left: -70px;
+            right: -70px;
+            color: #fff;
+            text-align: right;
+            height: 20px;
+            display: none;
+            transition: all 0.5s ease-out;
 
-		}
+            line-height: 22px;
+        }
+        .circle-nav .title{
+            display: inline-block;
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+        .circle-nav .content{
+            display: none;
+        }
+        .t-left{
+            text-align: left;
+        }
 
-		.circle-middle-greater .circle-nav{
-			right: -96px;
-			top: 221px;
-			display: block;
-		}
-		.circle-big-greater .circle-nav{
-			right: -92px;
-			top: 345px;
-			display: block;
-		}
+        .circle-nav .content{
+            padding: 10px 30px;
+        }
+        .circle-nav .content p{
+            padding: 10px 0px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .circle-nav .content .header{
+            border-bottom: 1px solid #717171;
+            padding: 10px 0px;
+            font-size: 1.4rem;
+        }
+        .circle-nav .close{
+            padding: 0px 4px;
+            cursor: pointer;
+        }
+        .circle-nav .close:hover{
+            transform: scale(1.25);
+        }
 
 
-		.top-word{
-			position: absolute;
-			top: -95px;
-			color: #fff;
-			text-align: center;
-			width: 334px;
-		}
+        .start-greater .circle-nav{
+            /*top: 145px;*/
+            display: block;
 
-		.top-word .title{
-			position: relative;
-			color: #4c4c4c;
-			font-size: 16px;
-			margin-bottom: 10px;
-			transition: all 0.5s ease-out;
-		}
+        }
 
-		.top-word .subtitle{
-			color: #7f8380;
-			font-size: 14px;
-		}
+        .circle-middle-greater .circle-nav{
+            right: -96px;
+            /*top: 221px;*/
+            display: block;
+        }
+        .circle-big-greater .circle-nav{
+            right: -92px;
+            /*top: 345px;*/
+            display: block;
+        }
 
-		.circle-big-greater .top-word{
-			position: relative;
-			width: 710px;
-			transition: all 0.5s ease-out	;
-		}
+
+        .top-word{
+            position: absolute;
+            top: -95px;
+            color: #fff;
+            text-align: center;
+            /*width: 334px;*/
+        }
+
+        .top-word .title{
+            position: relative;
+            color: #4c4c4c;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: all 0.5s ease-out;
+        }
+
+        .top-word .subtitle{
+            color: #7f8380;
+            font-size: 14px;
+        }
+
+        .circle-big-greater .top-word{
+            position: relative;
+            /*width: 710px;*/
+            transition: all 0.5s ease-out	;
+        }
 
 
 
 
 
-		@keyframes myfirst
-		{
-			from  {transform: rotate(0deg)}
-			to {
-				transform: rotate(70deg);
-				left: 150px;
-				top: -200px;
-				display: none;
+        @keyframes myfirst
+        {
+            from  {transform: rotate(0deg)}
+            to {
+                transform: rotate(70deg);
+                left: 150px;
+                top: -200px;
+                display: none;
 
-			}
-		}
-
-
-
-		.circle-big-greater .top-word .title
-		{
-			/*animation: myfirst 10s 1;*/
-			/*animation-fill-mode : forwards;*/
+            }
+        }
 
 
-			/*left: 150px;*/
-			/*top: -200px;*/
-			/*display: none;*/
-			/*transition: all 0.5s ease-out	;*/
-		}
 
-	</style>
-	<link rel="stylesheet" href="../index/appui.css">
-	<link rel="stylesheet" href="../index/index.css">
+        .circle-big-greater .top-word .title
+        {
+            /*animation: myfirst 10s 1;*/
+            /*animation-fill-mode : forwards;*/
 
-	<!--[if IE]>
-	<script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
+
+            /*left: 150px;*/
+            /*top: -200px;*/
+            /*display: none;*/
+            /*transition: all 0.5s ease-out	;*/
+        }
+
+        .section-2 p{
+            text-align: center;
+            color:#fff
+        }
+
+        .big-title{
+            margin-bottom: 2.6rem;
+        }
+        .icon-links{
+            height: 21.7rem;
+        }
+        .middle-title{
+            margin-bottom: 5.3rem;
+        }
+        .middle-subtitle{
+            line-height: 2.2rem;
+            color: #aeaeae !important;
+        }
+        .mt-6rem{
+            margin-top: 6rem;
+        }
+        .mt-1rem{
+            margin-top: 1rem;
+        }
+
+        .mt-2-5rem{
+            margin-top: 1rem;
+        }
+
+        .phone-git{
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .phone-git img{
+            display: inline-block;
+            width: 60rem;
+        }
+
+        .word-cntr p{
+            width: 45rem;
+            margin: auto;
+            line-height: 2rem;
+        }
+
+        .codes{
+            text-align: center;
+            margin-top:10rem ;
+        }
+        .codes .cell{
+            width: 60rem;
+            margin:auto;
+        }
+        .codes p{
+            line-height: 2.5rem;
+            font-size: 1.4rem;
+        }
+
+        .animation-box >div,.animation-box >p{
+            display: none;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/appui.css">
+
+
+    <!--[if IE]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
 
 <body onLoad="InitScripts()">
 <div id="dowebok">
 
-	<div class="section">
+    <div class="section">
 
-		<div class="header" id="demo">
-			<div class="top_logo">S T A R T H A L O</div>
-
-			<div class="canvaszz"> </div>
-			<canvas id="canvas"></canvas>
-		</div>
-
-
-		<div class="animation-box">
-
-			<div class="start">
-				<p class="word">星环创世</p>
-				<p class="button">START</p>
-
-				<div class="circle-nav">
-					<p class="title">公司简介</p>
-					<div class="content">
-						<div class="cell header">
-							<div class="cell-bd t-left">公司介绍</div>
-							<div class="cell-ft close">x</div>
-						</div>
-						<p>
-							星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
-						</p>
-					</div>
-				</div>
-
-			</div>
-			<div class="circle-middle">
-				<div class="satellite-wrap">
-					<i class="satellite"></i>
-				</div>
-				<div class="circle-nav">
-					<p class="title">公司简介</p>
-					<div class="content">
-						<div class="cell header">
-							<div class="cell-bd t-left">公司介绍</div>
-							<div class="cell-ft close">x</div>
-						</div>
-						<p>
-							星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="circle-big">
-
-				<div class="top-word">
-					<p class="title">通 证 经 济 与 共 识 社 群 践 行 者</p>
-					<p class="subtitle">STARTHALO</p>
-				</div>
-
-				<div class="satellite-wrap"><i class="satellite"></i></div>
-				<div class="circle-nav">
-					<p class="title">公司简介</p>
-					<div class="content">
-						<div class="cell header">
-							<div class="cell-bd t-left">公司介绍</div>
-							<div class="cell-ft close">x</div>
-						</div>
-						<p>
-							星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="header" id="demo">
+            <div class="canvaszz"> </div>
+            <canvas id="canvas"></canvas>
+        </div>
 
 
 
-	</div>
-	<div class="section" >
-        <p style="font-size: 2rem;margin-top: 1%">产品业务</p>
-		<p style="font-size: 1rem; margin-top: 20px">主要产品业务</p>
-		<div id="Ellipse">
-			<img class="RotatingIcon"  src="images/guwen.png">
-			<img class="RotatingIcon"  src="images/luntan.png">
-			<img class="RotatingIcon"  src="images/peixun.png">
-			<img class="RotatingIcon"  src="images/yanjiu.png">
-			<img class="RotatingIcon"  src="images/yunying.png">
-			<img class="RotatingIcon"  src="images/pingtai.png">
+        <div class="animation-box">
+            <p class="start-word">S T A R T H A L O</p>
+            <div class="start">
+                <p class="word">星环创世</p>
+                <p class="button">START</p>
 
-		</div>
-		<p class="boottomP" >区块链为技术基础的内容传播平台</p>
-		<p style="margin-top: 1.5rem;font-size: 1rem">即时通信社群管理平台、个人数据银行工具、数字资产管理工具、原创内容平台</p>
-		<p style="margin-top: 1rem;font-size: 1rem">以建立和运营自媒体内容矩阵,如通证派元道,星环财经</p>
+                <div class="circle-nav">
+                    <p class="title">公司简介</p>
+                    <div class="content">
+                        <div class="cell header">
+                            <div class="cell-bd t-left">公司介绍</div>
+                            <div class="cell-ft close">x</div>
+                        </div>
+                        <p>
+                            星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+                        </p>
+                    </div>
+                </div>
 
-	</div>
-	<div class="section">
-		<p style="font-size: 2rem;margin-top: 1%">商业模式</p>
-		<p style="font-size: 1rem; margin-top: 20px">通过建立token+社区的DCO模式</p>
-		<img style="width: 100%;margin-top: 5%" src="images/phone.gif">
-		<p style="margin-top: 1.5rem;font-size: 1rem">依托区块链技术为基础的分布式即时通信和媒体平台, 实现分布式内容存储、数据</p>
-		<p style="margin-top: 1rem;font-size: 1rem">存储与确权，最终实现个人数据资产变现</p>
-	</div>
-	<div class="section">
-		<div style="display: flex;flex-direction: row;justify-content: center;background: black">
-			<div>
-				<img class="pubIcon" src="images/pub.png">
-				<p style="font-size: 1rem">公众号</p>
-			</div>
-			<div>
-				<img class="pubIcon" src="images/kefu.png">
-				<p style="font-size: 1rem">咨询</p>
-			</div>
-		</div>
+            </div>
+            <div class="circle-middle">
+                <div class="satellite-wrap">
+                    <i class="satellite"></i>
+                </div>
+                <div class="circle-nav">
+                    <p class="title">公司愿景</p>
+                    <div class="content">
+                        <div class="cell header">
+                            <div class="cell-bd t-left">公司愿景</div>
+                            <div class="cell-ft close">x</div>
+                        </div>
+                        <p>
+                            星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-big">
+
+                <div class="top-word">
+                    <p class="title">通 证 经 济 与 共 识 社 群 践 行 者</p>
+                    <p class="subtitle">STARTHALO</p>
+                </div>
+
+                <div class="satellite-wrap"><i class="satellite"></i></div>
+                <div class="circle-nav">
+                    <p class="title">公司定位</p>
+                    <div class="content">
+                        <div class="cell header">
+                            <div class="cell-bd t-left">公司定位</div>
+                            <div class="cell-ft close">x</div>
+                        </div>
+                        <p>
+                            星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-		<div style="width: 100%;height: 100px;background: white;position: absolute;bottom: 0px;">
-			<div style="display: flex;justify-content: space-between;align-items: center;height: 100%">
-				<img style="width: 10%;;margin-left: 10%" src="images/logo3@.png">
-				<span style="color: black;margin-right: 10%">STARHALO</span>
-			</div>
 
-		</div>
-	</div>
+    </div>
+    <div class="section section-2" id="nextS">
+        <p class="t-big big-title">产品业务</p>
+        <p class="t-middle">目前主要产品业务</p>
+
+        <div class="ellipse-wrap">
+            <div id="Ellipse">
+                <img class="RotatingIcon"  src="images/guwen.png">
+                <img class="RotatingIcon"  src="images/luntan.png">
+                <img class="RotatingIcon"  src="images/peixun.png">
+                <img class="RotatingIcon"  src="images/yanjiu.png">
+                <img class="RotatingIcon"  src="images/yunying.png">
+                <img class="RotatingIcon"  src="images/pingtai.png">
+
+            </div>
+        </div>
+        <p class="t-middle middle-title">区块链为技术基础的内容传播平台</p>
+
+        <div class="word-cntr">
+            <p class="t-middle middle-subtitle">
+                即时通信社群管理工具、个人数据银行工具、数字资产管理工具、原创内容平台已建立和运营自媒体内容矩阵，如通证派元道，星环财经
+            </p>
+        </div>
+
+
+        <p class="t-middle mt-6rem">商业模式</p>
+        <p class="t-middle mt-1rem">通过建立token+社区的DCO模式</p>
+
+        <div class="phone-git">
+            <img  src="images/phone.gif">
+        </div>
+
+        <div class="word-cntr mt-2-5rem">
+            <p class="t-middle">依托区块链技术为基础的分布式即时通信和媒体平台应用，实现分布式内容存储、数据存储与确权，最终实现个人数据资产变现</p>
+        </div>
+
+        <div class="codes">
+            <div class="cell">
+                <div class="cell-bd">
+                    <img src="images/gzh_code.jpg"/>
+                    <p>公众号</p>
+                </div>
+                <div class="cell-bd">
+                    <img src="images/zx_code.jpg"/>
+                    <p>咨询</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="section footerss"  id="footer">
+
+        <div class="footer-cntr">
+            <div class="cell">
+                <div class="cell-bd logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="cell-bd">
+                    STARTHALO
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 </div>
 <script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
 <script src="js/ImageRotator-min.js"></script>
+<style>
+    .start-word{
+        position: relative;
+        height: 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        line-height: 20px;
+        top: 390px;
+    }
+    .section-2{
+        padding-top: 5rem;
+    }
+    .ellipse-wrap{
+        position: relative;
+        padding:3.6rem 0rem;
+        margin: 2.5rem 0;
+    }
+    #Ellipse{
+        width: 20rem;
+        position: relative;
+    }
+    #Ellipse img{
+        width: 2.5rem;
+
+    }
+    .footer-cntr{
+        background: #fff;
+        padding: 2.5rem;
+        font-size: 1.8rem;
+        color: #5c5c5c;
+    }
+    .footer-cntr .logo img{
+        display: block;
+        margin: auto;
+        width: 4.2rem;
+    }
+    .footer-cntr .cell-bd{
+        text-align: center;
+    }
+    .section.footerss .fp-tableCell{
+        display: block!important;
+        }
+</style>
 <script type="text/javascript">
     var imageRotater = null;
     function InitScripts(){
-        imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',1,110,1000, 0, 90, 0, null);
+        imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',1,110,3000, 0, 90, 0, null);
     }
 </script>
 <script>
 
     $(function(){
         $('#dowebok').fullpage({
-            sectionsColor : ['#000', '#000', '#000', '#000']
+            sectionsColor : ['#000', '#000', '#000', '#000'],
+            anchors: ['section-1', 'section-2', 'section-3']
         });
 
         $(window).resize(function(){
@@ -453,7 +543,6 @@
 
 
 </script>
-
 <script>
     $(function () {
 
@@ -493,13 +582,23 @@
         var resetLayout=function () {
             var h=$(window).height();
             var w=$(window).width();
-            var top=(h-800)/2;
-            var left=(w-800)/2;
+            var animationBoxW=$(".animation-box").width();
+            var animationBoxH=$(".animation-box").height();
+            var top=(h-animationBoxW)/2;
+            var left=(w-animationBoxH)/2;
             $(".animation-box").css({"top":top,"left":left})
         }
 
         resetLayout();
         $(window).resize(resetLayout)
+
+        //显示文字
+        $(".animation-box >p").fadeIn(2000,function () {
+            $(".animation-box >p").fadeOut(2000);
+            $(".animation-box >div").css({"overflow":"visible"});
+            $(".animation-box >div").fadeIn(2000);
+        })
+
 
 
     })
