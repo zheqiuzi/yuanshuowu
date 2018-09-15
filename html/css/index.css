@@ -381,17 +381,21 @@ body {
     height: 20px;
     line-height: 22px;
   }
+  .start-greater .content {
+    margin-left: -170px;
+    margin-right: -208px;
+  }
   .start-greater .circle-nav {
-    top: 145px;
+    top: 120px;
   }
   .circle-middle-greater .circle-nav {
     right: -68px;
-    top: 221px;
+    top: 196px;
     display: block;
   }
   .circle-big-greater .circle-nav {
     right: -72px;
-    top: 340px;
+    top: 290px;
     display: block;
   }
   .animation-box {
@@ -412,15 +416,15 @@ body {
     line-height: 156px;
   }
   .start-greater {
-    width: 310px;
-    height: 310px;
+    width: 260px;
+    height: 260px;
     left: 400px;
     top: 400px;
-    margin-top: -155px;
-    margin-left: -155px;
+    margin-top: -130px;
+    margin-left: -130px;
     border: 2px dashed #b4b4b4;
-    border-radius: 155px;
-    line-height: 310px;
+    border-radius: 130px;
+    line-height: 260px;
   }
   .circle-middle {
     width: 248px;
@@ -462,16 +466,16 @@ body {
     transition: all 0.5s ease-out;
   }
   .circle-middle-greater {
-    width: 462px;
-    height: 462px;
+    width: 412px;
+    height: 412px;
     display: block;
     position: absolute;
-    border-radius: 231px;
+    border-radius: 206px;
     border: 1.5px dashed #b4b4b4;
     left: 400px;
     top: 400px;
-    margin-top: -231px;
-    margin-left: -231px;
+    margin-top: -206px;
+    margin-left: -206px;
     transition: all 0.5s ease-out;
   }
   .circle-middle-greater:hover {
@@ -491,7 +495,7 @@ body {
     position: relative;
     width: 20px;
     height: 20px;
-    left: 231px;
+    left: 206px;
     background: #fff;
     box-shadow: 0px 0px 15px 6px rgba(255, 255, 255, 0.5);
     display: block;
@@ -499,6 +503,10 @@ body {
     margin-left: -10px;
     margin-top: -10px;
     transition: all 0.5s ease-out;
+  }
+  .circle-middle-greater .content {
+    margin-left: -94px;
+    margin-right: -102px;
   }
   .circle-big {
     width: 334px;
@@ -540,16 +548,16 @@ body {
     transition: all 0.5s ease-out;
   }
   .circle-big-greater {
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     display: block;
     position: absolute;
-    border-radius: 350px;
+    border-radius: 300px;
     border: 1px dashed #b4b4b4;
     left: 400px;
     top: 400px;
-    margin-top: -350px;
-    margin-left: -350px;
+    margin-top: -300px;
+    margin-left: -300px;
     transition: all 0.5s ease-out;
   }
   .circle-big-greater:hover {
@@ -569,7 +577,7 @@ body {
     position: relative;
     width: 20px;
     height: 20px;
-    left: 350px;
+    left: 300px;
     background: #fff;
     box-shadow: 0px 0px 15px 6px rgba(255, 255, 255, 0.5);
     display: block;

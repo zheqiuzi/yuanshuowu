@@ -314,13 +314,13 @@ body{
   @animation_box_height:800px;
 
   @startRadius:156px;
-  @start_greater:310px;
+  @start_greater:260px;
 
   @circleMiddleRadius:248px;
-  @circleMiddleGreaterRadius:462px;
+  @circleMiddleGreaterRadius:412px;
 
   @circleBigRadius:334px;
-  @circleBigGreaterRadius:700px;
+  @circleBigGreaterRadius:600px;
 
 
 
@@ -330,8 +330,13 @@ body{
     right: -35px;
     height: 20px;
     line-height: 22px;
+
   }
 
+  .start-greater .content{
+      margin-left: -170px;
+      margin-right: -208px;
+  }
   .start-greater .circle-nav{
     top: (@start_greater - 20)/2;
   }
@@ -385,6 +390,10 @@ body{
   }
   .circle-middle-greater{
     .circle(@circleMiddleGreaterRadius,@circleMiddleGreaterRadius,1.5px,dashed,#b4b4b4,_satellite_rotate_animation,20s,@animation_box_width,@animation_box_height);
+    .content{
+      margin-left: -94px;
+      margin-right: -102px;
+    }
   }
 
 

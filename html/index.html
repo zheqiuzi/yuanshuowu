@@ -93,7 +93,7 @@
             top: -95px;
             color: #fff;
             text-align: center;
-            /*width: 334px;*/
+            width: 100%;
         }
 
         .top-word .title{
@@ -191,7 +191,8 @@
 
         .codes{
             text-align: center;
-            margin-top:10rem ;
+            margin-top: 8rem;
+            margin-bottom: 8rem;
         }
         .codes .cell{
             width: 60rem;
@@ -205,6 +206,18 @@
         .animation-box >div,.animation-box >p{
             display: none;
         }
+        #iconVal{
+            height: 72px;
+        }
+
+        svg{
+            position: absolute;
+            top: 0px;
+        }
+        .codes img{
+            width: 130px;
+        }
+
 
     </style>
     <link rel="stylesheet" href="css/index.css">
@@ -260,7 +273,7 @@
                             <div class="cell-ft close">x</div>
                         </div>
                         <p>
-                            星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+                            公司以打造集文化传媒、金融服务、产业孵化一体的传媒科技集团为愿景
                         </p>
                     </div>
                 </div>
@@ -281,7 +294,7 @@
                             <div class="cell-ft close">x</div>
                         </div>
                         <p>
-                            星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。
+                            定位于创意和科技驱动型区块链传媒科技集团，专注区块链行业社区和创意市场公关服务，逐步构建区块链生态平台。
                         </p>
                     </div>
                 </div>
@@ -297,20 +310,20 @@
 
         <div class="ellipse-wrap">
             <div id="Ellipse">
-                <img class="RotatingIcon"  src="images/guwen.png">
-                <img class="RotatingIcon"  src="images/luntan.png">
-                <img class="RotatingIcon"  src="images/peixun.png">
-                <img class="RotatingIcon"  src="images/yanjiu.png">
-                <img class="RotatingIcon"  src="images/yunying.png">
-                <img class="RotatingIcon"  src="images/pingtai.png">
+                <img class="RotatingIcon" data-title="区块链为技术基础的内容传播平台" data-val="即时通信社群管理工具、个人数据银行工具、数字资产管理工具、原创内容平台，已建立和运营自媒体内容矩阵，如通证派元道，星环财经" src="images/guwen.png">
+                <img class="RotatingIcon"  data-title="权威行业研究报告" data-val="借助世纪互联和中关村区块链产业联盟的政府、高校、研究院等背景资源" src="images/luntan.png">
+                <img class="RotatingIcon"  data-title="IP级区块链大赛和峰会论坛" data-val="独家承办中关村区块链产业协会的区块链大赛与各项活动"  src="images/peixun.png">
+                <img class="RotatingIcon"  data-title="行业内顶级区块链与通证经济体系设计咨询与培训" data-val="元道、孟岩等领衔"  src="images/yanjiu.png">
+                <img class="RotatingIcon"  data-title="项目孵化与投资顾问"  data-val="与地方政府和资本方——节点资本，分布式资本，歌者资本有良好的关系基础，团队拥有项目整体市场策划与执行能力" src="images/yunying.png">
+                <img class="RotatingIcon"  data-title="节点式社区运营"  data-val="引进token+社区的DCO治理机制" src="images/pingtai.png">
 
             </div>
         </div>
-        <p class="t-middle middle-title">区块链为技术基础的内容传播平台</p>
+        <p class="t-middle middle-title" id="iconTitle"></p>
 
         <div class="word-cntr">
-            <p class="t-middle middle-subtitle">
-                即时通信社群管理工具、个人数据银行工具、数字资产管理工具、原创内容平台已建立和运营自媒体内容矩阵，如通证派元道，星环财经
+            <p class="t-middle middle-subtitle"  id="iconVal">
+
             </p>
         </div>
 
@@ -344,14 +357,12 @@
     </div>
     <div class="section footerss"  id="footer">
 
-        <div class="footer-cntr">
-            <div class="cell">
-                <div class="cell-bd logo">
-                    <img src="images/logo.png">
-                </div>
-                <div class="cell-bd">
-                    STARTHALO
-                </div>
+        <div class="cell footer-cntr">
+            <div class="cell-bd logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="cell-bd">
+                STARTHALO
             </div>
         </div>
 
@@ -361,7 +372,7 @@
 </div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.fullPage.js"></script>
-<script src="js/ImageRotator-min.js"></script>
+<script src="js/ImageRotator.js"></script>
 <style>
     .start-word{
         position: relative;
@@ -390,9 +401,10 @@
     }
     .footer-cntr{
         background: #fff;
-        padding: 2.5rem;
-        font-size: 1.8rem;
+         font-size: 18px;
+        height: 93px;
         color: #5c5c5c;
+        vertical-align: middle;
     }
     .footer-cntr .logo img{
         display: block;
@@ -409,7 +421,14 @@
 <script type="text/javascript">
     var imageRotater = null;
     function InitScripts(){
-        imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',1,110,3000, 0, 90, 0, null);
+        var activeCallback=function (dom) {
+            var title=$(dom).attr("data-title");
+            var val=$(dom).attr("data-val");
+            // debugger
+            $("#iconTitle").text(title);
+            $("#iconVal").text(val);
+        }
+        imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',1,110,3000, 0, 90, 0, null,activeCallback);
     }
 </script>
 <script>
@@ -433,7 +452,9 @@
             }
         }
 
+        // setTimeout(autoScrolling,2000)
         autoScrolling();
+        // autoScrolling();
     });
 
     //宇宙特效

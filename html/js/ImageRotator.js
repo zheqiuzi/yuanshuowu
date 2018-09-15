@@ -16,7 +16,7 @@ var ImageRotatorJS = function(containerId, // id of the parent div
                               rotationAngle, // +/- 0~360 degree. If we assume a Z axis orthogonal to the screen, then 45 degrees cause to sloop images to the screen
                               startAngle, // +/- 0-360 degree. The initial position of the first image
                               reflectionPercentage, // 0~100. The amount of reflection of images
-                              circumferenceDotsColor) {
+                              circumferenceDotsColor,activeCallback) {
     "use strict";
     var MJZImageRotatorJS = function(parentDivDOM,
                            elementsClass,
@@ -26,7 +26,7 @@ var ImageRotatorJS = function(containerId, // id of the parent div
                            rotationAngle,
                            startAngle,
                            reflectionPercentage,
-                           circumferenceDotsColor) {
+                           circumferenceDotsColor,activeCallback) {
         "use strict";
         // Just needs to check first argument. Others have default value.
         if (!parentDivDOM || typeof parentDivDOM !== 'object') {
@@ -83,27 +83,38 @@ var ImageRotatorJS = function(containerId, // id of the parent div
                 this.Counter = 0;
             if (this.Counter < 0) //happen when rotateDirection==-1
                 this.Counter = this.inc - 1;
+            var el;
             for (var _i = 0; _i < this.items.length; _i++) // Transfer all the objects to the next place
             {
                 var IRJS_Current_Position = (this.Counter + this.items[_i].StaticPosition) % this.aary.length; // New place of the object
                 if (this.rotateDirection == 1) {
                     if (IRJS_Current_Position == (this.aary.length - 1) && _i != 0) {
+                        el=this.items[_i];
                         this.CurrentItem = _i;
                         this.items[_i].setAttribute('class', 'CurrentPlayedIcon');
                     } else if (IRJS_Current_Position == 0 && _i == 0) {
+                        el=this.items[_i];
                         this.CurrentItem = _i;
                         this.items[_i].setAttribute('class', 'CurrentPlayedIcon');
-                    } else
+                    } else{
+                        el=this.items[_i];
                         this.items[_i].setAttribute('class', 'NotCurrentIcon');
+                    }
+
                 } else if (this.rotateDirection == -1) {
                     if (IRJS_Current_Position == (this.aary.length - 1) && _i != 0) {
+                        el=this.items[_i];
                         this.CurrentItem = _i;
                         this.items[_i].setAttribute('class', 'CurrentPlayedIcon');
                     } else if (IRJS_Current_Position == 0 && _i == 0) {
+                        el=this.items[_i];
                         this.CurrentItem = _i;
                         this.items[_i].setAttribute('class', 'CurrentPlayedIcon');
-                    } else
+                    } else{
+                        el=this.items[_i];
                         this.items[_i].setAttribute('class', 'NotCurrentIcon');
+                    }
+
                 }
                 if (this.RequestedIcon == this.items[_i] && this.CurrentItem == _i) { //if you reach to requested icon stop
                     this.RequestedIcon = null;
@@ -174,6 +185,7 @@ var ImageRotatorJS = function(containerId, // id of the parent div
                         });
                 }
                 var _this = this;
+
                 this.items[_i].onclick = function() {
                     if (_this.CurrentItem != -1 ? _this.items[_this.CurrentItem] != this : true) {
                         _this.RequestedIcon = this;
@@ -198,9 +210,15 @@ var ImageRotatorJS = function(containerId, // id of the parent div
                     }
                 }
             }
+
+
+
+
             if (this.Counter % this.stop != 0) {
                 this.setTimeOut('position();', this.rotationSpeed);
             } else if (this.holdDelay) {
+                var el=$(".CurrentPlayedIcon")
+                activeCallback(el)
                 this.setTimeOut('position();', this.holdDelay);
             }
         };
@@ -384,7 +402,7 @@ var ImageRotatorJS = function(containerId, // id of the parent div
         throw 'Cannot find the container in DOM. Check the containerId that you passed.';
     }
     if (!window['IRJS_Ellipse' + containerId]) {
-        window['IRJS_Ellipse' + containerId] = new MJZImageRotatorJS(parentDivDOM, elementsClass, rotationSpeed, zoomPercentage, holdDelay, rotationAngle, startAngle, reflectionPercentage, circumferenceDotsColor);
+        window['IRJS_Ellipse' + containerId] = new MJZImageRotatorJS(parentDivDOM, elementsClass, rotationSpeed, zoomPercentage, holdDelay, rotationAngle, startAngle, reflectionPercentage, circumferenceDotsColor,activeCallback);
         return window['IRJS_Ellipse' + containerId];
     }
     return null;

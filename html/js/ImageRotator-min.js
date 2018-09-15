@@ -16,7 +16,8 @@ var ImageRotatorJS = function(containerId, // id of the parent div
                               rotationAngle, // +/- 0~360 degree. If we assume a Z axis orthogonal to the screen, then 45 degrees cause to sloop images to the screen
                               startAngle, // +/- 0-360 degree. The initial position of the first image
                               reflectionPercentage, // 0~100. The amount of reflection of images
-                              circumferenceDotsColor) {
+                              circumferenceDotsColor,
+                              activeCallback) { //activeCallback 当某个索引被激活后会回调该方法并传入索引
     "use strict";
     var MJZImageRotatorJS = function(parentDivDOM,
                                      elementsClass,
@@ -38,6 +39,7 @@ var ImageRotatorJS = function(containerId, // id of the parent div
          This functions inserts a node after a given node
          */
         this.insertAfter = function(referenceNode, newNode) {
+            debugger
             referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
         };
         /*
