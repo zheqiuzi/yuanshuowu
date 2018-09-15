@@ -559,7 +559,10 @@
         window.requestAnimationFrame(animation);
     }
 
-    animation();
+    if($(window).width()<=640){
+        animation();
+    }
+
 
 
 
