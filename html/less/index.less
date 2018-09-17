@@ -11,6 +11,10 @@ body{
 
 }
 
+.transition{
+  transition: all 0.5s ease-out	;
+}
+
 
 
 
@@ -26,7 +30,7 @@ body{
   top: @animation-box-height/2;
   margin-top: -@width/2;
   margin-left:-@height/2;
-  transition: all 0.5s ease-out	;
+  //transition: all 0.5s ease-out	;
   &:hover{
     transform: scale(1.015);
   }
@@ -100,6 +104,10 @@ body{
     transform: scale(1);
     opacity: 0.5;
   }
+}
+
+.circle_div{
+
 }
 
 .start{
@@ -235,7 +243,7 @@ body{
     width: @animation_box_width;
     height: @animation_box_height;
     position: absolute;
-    margin: auto;
+    margin-top: 60px auto;
   }
 
   .start{
@@ -356,7 +364,7 @@ body{
     width: @animation_box_width;
     height: @animation_box_height;
     position: absolute;
-    margin: auto;
+    margin: 60px auto;
   }
 
   .start{

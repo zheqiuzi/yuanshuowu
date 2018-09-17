@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>星环</title>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <!--<link href="css/index_style.css" rel="stylesheet" type="text/css">-->
@@ -191,8 +191,8 @@
 
         .codes{
             text-align: center;
-            margin-top: 80px;
-            margin-bottom: 80px;
+            margin-top: 8rem;
+            margin-bottom: 8rem;
         }
         .codes .cell{
             width: 60rem;
@@ -201,7 +201,6 @@
         .codes p{
             line-height: 2.5rem;
             font-size: 1.4rem;
-            color: #fff;
         }
 
         .animation-box >div,.animation-box >p{
@@ -217,9 +216,6 @@
         }
         .codes img{
             width: 130px;
-        }
-        .footerss .fp-tableCell{
-            vertical-align: bottom !important;
         }
 
 
@@ -247,7 +243,7 @@
 
         <div class="animation-box">
             <p class="start-word">S T A R T H A L O</p>
-            <div class="circle_div start">
+            <div class="start">
                 <p class="word">星环创世</p>
                 <p class="button">START</p>
 
@@ -265,7 +261,7 @@
                 </div>
 
             </div>
-            <div class="circle_div circle-middle">
+            <div class="circle-middle">
                 <div class="satellite-wrap">
                     <i class="satellite"></i>
                 </div>
@@ -282,7 +278,7 @@
                     </div>
                 </div>
             </div>
-            <div class="circle_div circle-big">
+            <div class="circle-big">
 
                 <div class="top-word">
                     <p class="title">通 证 经 济 与 共 识 社 群 践 行 者</p>
@@ -343,13 +339,6 @@
             <p class="t-middle">依托区块链技术为基础的分布式即时通信和媒体平台应用，实现分布式内容存储、数据存储与确权，最终实现个人数据资产变现</p>
         </div>
 
-
-
-
-    </div>
-    <div class="section footerss"  id="footer">
-
-
         <div class="codes">
             <div class="cell">
                 <div class="cell-bd">
@@ -364,6 +353,9 @@
         </div>
 
 
+
+    </div>
+    <div class="section footerss"  id="footer">
 
         <div class="cell footer-cntr">
             <div class="cell-bd logo">
@@ -429,19 +421,12 @@
 <script type="text/javascript">
     var imageRotater = null;
     function InitScripts(){
-        var speed=500;
         var activeCallback=function (dom) {
             var title=$(dom).attr("data-title");
             var val=$(dom).attr("data-val");
-            $("#iconTitle").fadeOut(speed,function () {
-                $(this).text(title);
-                $(this).fadeIn(speed)
-            })
-            $("#iconVal").fadeOut(speed,function () {
-                $(this).text(val);
-                $(this).fadeIn(speed)
-            })
-
+            // debugger
+            $("#iconTitle").text(title);
+            $("#iconVal").text(val);
         }
         imageRotater = ImageRotatorJS('Ellipse','RotatingIcon',1,110,3000, 0, 90, 0, null,activeCallback);
     }
@@ -460,7 +445,7 @@
 
         function autoScrolling(){
             var $ww = $(window).width();
-            if($ww < 640){
+            if($ww < 1024){
                 $.fn.fullpage.setAutoScrolling(false);
             } else {
                 $.fn.fullpage.setAutoScrolling(true);
@@ -633,17 +618,9 @@
 
         //显示文字
         $(".animation-box >p").fadeIn(2000,function () {
-            $(".animation-box >p").fadeOut(2000,function () {
-                $(this).addClass("transition")
-            })
-
-            // $(".animation-box >div").css({"overflow":"visible"});
-            $(".animation-box >div").fadeIn(1000,function () {
-                $(this).addClass("transition")
-            })
-
-
-
+            $(".animation-box >p").fadeOut(2000);
+            $(".animation-box >div").css({"overflow":"visible"});
+            $(".animation-box >div").fadeIn(2000);
         })
 
 

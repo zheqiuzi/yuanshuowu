@@ -942,7 +942,7 @@
             if (options.css3 && options.autoScrolling && !options.scrollBar) {
                 if (v.anchorLink == 'section-3'){ //当滚屏到最后一屏时间
                     footer_a = $('#nextS').height();//倒数第二屏的高度
-                    footer_h = 93;//$('#footer').height();  //footer的高度
+                    footer_h = 415;//$('#footer').height();  //footer的高度
                     var translate3d = 'translate3d(0px, -' + (v.dtop - footer_a + footer_h) + 'px, 0px)';
                 }else{
                     var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
