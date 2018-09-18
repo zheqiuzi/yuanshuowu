@@ -9,8 +9,16 @@ html{
 body{
   background: #000;
   color: #fff;
+
+}
+.section{
+  padding: 0px 3rem;
 }
 .page_1{
+  position: relative;
+  .page_1_content_wrap{
+    position: relative;
+  }
   .title{
     font-size: 2.0rem;
     letter-spacing: 1.8rem;
@@ -59,3 +67,51 @@ body{
     margin: 5rem 0rem;
   }
 }
+
+.img_wrap{
+  text-align: center;
+  margin-top: 2rem;
+  &:first-child{
+    margin-top: 5rem !important;
+  }
+  img{
+    width: 12rem;
+    display: inline-block;
+  }
+  p{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 3.4rem;
+  }
+}
+
+.mt-8rem{
+  margin-top: 8rem;
+}
+
+.mt-2rem{
+  margin-top: 2rem !important;
+}
+.mb-2rem{
+  margin-bottom: 2rem !important;
+}
+
+.section >img{
+  display: block;
+  width: 30rem;
+  height: auto;
+  margin: 8rem auto;
+
+}
+
+.prod-img-wrap{
+  margin: 5rem 0rem;
+}
+.prod-img-wrap img{
+  width: 7rem;
+}
+.navbar-inverse{
+  background-color: #000 !important;
+  border-color:#000 !important;
+}
+

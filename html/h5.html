@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/h5.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+
 </head>
 <body>
-<section class="page_1">
-    <p class="title">STARTHALO</p>
-    <p class="subtitle">通证经济与共识社群践行者</p>
 
-    <div class="btn-wrap">
-        <button>Start</button>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="images/img_logo_white.png">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<section class="page_1">
+
+    <div class="page_1_content_wrap">
+        <p class="title">STARTHALO</p>
+        <p class="subtitle">通证经济与共识社群践行者</p>
+
+        <div class="btn-wrap">
+            <button>Start</button>
+        </div>
     </div>
+
 
 </section>
 
@@ -25,7 +53,7 @@
 
     <p class="content">星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。</p>
 
-    <img>
+    <img src="images/img_001.png"/>
 </div>
 
 <div class="section">
@@ -36,7 +64,7 @@
 
     <p class="content">打造集文化传媒、金融服务、产业孵化一体的传媒科技集团为愿景</p>
 
-    <img>
+    <img src="images/img_002.png"/>
 </div>
 
 <div class="section">
@@ -56,10 +84,13 @@
         <hr>
     </div>
 
-    <p class="content">区块链为技术基础的内容传播平台</p>
-    <p class="content">即时通信社群管理工具、个人数据银行工具、数字资产管理工具、原创内容平台已建立和运营自媒体内容矩阵，如通证派元道，星环财经</p>
+    <div class="prod-img-wrap">
+        <img src="images/img_003.png"/>
+    </div>
 
-    <img>
+    <p class="content mb-2rem">区块链为技术基础的内容传播平台</p>
+    <p class="content mt-2rem">即时通信社群管理工具、个人数据银行工具、数字资产管理工具、原创内容平台已建立和运营自媒体内容矩阵，如通证派元道，星环财经</p>
+
 </div>
 
 
@@ -71,8 +102,8 @@
 
     <p class="content">依托区块链技术为基础的分布式即时通信和媒体平台应用，实现分布式内容存储、数据存储与确权，最终实现个人数据资产变现</p>
 
-    <img>
-</div>
+
+    <img src="images/img_004.png"/></div>
 
 
 <div class="section">
@@ -81,15 +112,36 @@
         <hr>
     </div>
 
+    <div class="img_wrap mt-8rem">
+        <img src="images/zx_code.jpg"/>
+        <p>公众号</p>
+    </div>
 
-    <img src="images/zx_code.jpg" height="129" width="130"/>
-    <img src="images/gzh_code.jpg" height="344" width="344"/>
+    <div class="img_wrap">
+        <img src="images/gzh_code.jpg"/>
+        <p>公众号</p>
+    </div>
+
+
 </div>
 
 <div class="footer">
 
 </div>
 
+<script>
+    var setLayoutPage_1=function(){
+        var wh=$(window).height();
+        var top=(wh-241)/2;
+        $(".page_1").height(wh);
+        $(".page_1_content_wrap").css({"top":top})
+    }
+    // $(document).scrollTop(h);
+    $(function () {
+        setLayoutPage_1();
+        $(window).resize(setLayoutPage_1);
+    })
+</script>
 
 
 
