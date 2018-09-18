@@ -9,8 +9,13 @@ html{
 body{
   background: #000;
   color: #fff;
+  padding: 0px 3rem;
 }
 .page_1{
+  position: relative;
+  .page_1_content_wrap{
+    position: relative;
+  }
   .title{
     font-size: 2.0rem;
     letter-spacing: 1.8rem;
@@ -58,4 +63,25 @@ body{
     color: #dfdddd;
     margin: 5rem 0rem;
   }
+}
+
+.img_wrap{
+  text-align: center;
+  margin-top: 2rem;
+  &:first-child{
+    margin-top: 5rem !important;
+  }
+  img{
+    width: 12rem;
+    display: inline-block;
+  }
+  p{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 3.4rem;
+  }
+}
+
+.mt-8rem{
+  margin-top: 8rem;
 }
