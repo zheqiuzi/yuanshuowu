@@ -9,6 +9,39 @@ html{
 body{
   background: #000;
   color: #fff;
+
+}
+
+.transition{
+  transition: all 0.5s ease-out	;
+}
+
+/**无样式的弹性布局**/
+.cell{
+  display: flex;
+  /*横向排列*/
+  flex-direction: row ;
+  /*不换行*/
+  flex-wrap: nowrap;
+  /*两端对齐*/
+  justify-content:space-between;
+  /*垂直居中*/
+  align-items: center;
+}
+.cell .cell-hd{
+  flex-grow: 0;
+  flex-shrink:0;
+}
+.cell .cell-bd{
+  flex-grow: 1;
+  flex-shrink:1;
+}
+.cell .cell-ft{
+  flex-grow: 0;
+  flex-shrink:0;
+}
+
+.section{
   padding: 0px 3rem;
 }
 .page_1{
@@ -40,11 +73,15 @@ body{
       border: 1px solid #717171;
       color: #fff;
       font-size: 1.6rem;
+      &:focus{
+        background: #3e3d3d;
+      }
     }
   }
 
 }
 .section{
+  padding-top: 6rem;
   .title{
     p{
       font-size: 1.7rem;
@@ -84,4 +121,57 @@ body{
 
 .mt-8rem{
   margin-top: 8rem;
+}
+.mb-4rem{
+  margin-bottom: 4rem;
+}
+.mt-2rem{
+  margin-top: 2rem !important;
+}
+.mb-2rem{
+  margin-bottom: 2rem !important;
+}
+
+.section >img{
+  display: block;
+  width: 30rem;
+  height: auto;
+  margin: 8rem auto;
+
+}
+
+.prod-img-wrap{
+  margin: 5rem 0rem;
+}
+.prod-img-wrap img{
+  width: 7rem;
+}
+.navbar-inverse{
+  background-color: #000 !important;
+  border-color:#000 !important;
+}
+
+.navbar-header img{
+  display: block;
+  height: 20px;
+}
+
+.navbar{
+  border: none !important;
+}
+
+.footer{
+  background: #fff;
+  font-size: 1.4rem;
+  color: #5c5c5c;
+  vertical-align: middle;
+  padding: 1.5rem 0rem;
+}
+.footer .logo img{
+  display: block;
+  margin: auto;
+  width: 2.5rem;
+}
+.footer .cell-bd{
+  text-align: center;
 }

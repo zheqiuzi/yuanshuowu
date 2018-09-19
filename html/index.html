@@ -408,12 +408,12 @@
 
     }
     .footer-cntr{
-        background: #fff;
+         background: #fff;
          font-size: 18px;
-        height: 93px;
-        color: #5c5c5c;
-        vertical-align: middle;
-    }
+         height: 93px;
+         color: #5c5c5c;
+         vertical-align: middle;
+     }
     .footer-cntr .logo img{
         display: block;
         margin: auto;
@@ -583,6 +583,7 @@
 
 </script>
 <script>
+    if($(window).width()<640){location.href="h5.html"}
     $(function () {
 
         $(".start .button").click(function () {
@@ -635,14 +636,12 @@
         $(".animation-box >p").fadeIn(2000,function () {
             $(".animation-box >p").fadeOut(2000,function () {
                 $(this).addClass("transition")
+                $(".animation-box >div").fadeIn(500,function () {
+                    $(this).addClass("transition")
+                })
             })
 
             // $(".animation-box >div").css({"overflow":"visible"});
-            $(".animation-box >div").fadeIn(1000,function () {
-                $(this).addClass("transition")
-            })
-
-
 
         })
 

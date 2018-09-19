@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e167806a-c48f-491a-96fe-ac34582e66d8" name="Default" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/html/css/h5.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/h5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/h5.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/h5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/less/h5.less" beforeDir="false" afterPath="$PROJECT_DIR$/html/less/h5.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
+>>>>>>> febde0794159e9b0e8022a2327f853c16e185214
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +31,19 @@
       <file leaf-file-name="h5.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/h5.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="345">
               <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="361">
+              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding />
+=======
+            <state relative-caret-position="307">
+              <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
+>>>>>>> febde0794159e9b0e8022a2327f853c16e185214
             </state>
           </provider>
         </entry>
@@ -28,8 +51,16 @@
       <file leaf-file-name="h5.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/less/h5.less">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="448">
+              <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+              <folding>
+                <element signature="e#129#635#0" expanded="false" />
+              </folding>
+=======
             <state relative-caret-position="304">
               <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
             </state>
           </provider>
         </entry>
@@ -156,10 +187,21 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="-154" />
     <option name="y" value="294" />
+=======
+<<<<<<< HEAD
+    <option name="x" value="1280" />
+    <option name="width" value="1280" />
+    <option name="height" value="1400" />
+=======
+    <option name="x" value="1002" />
+    <option name="y" value="85" />
+>>>>>>> febde0794159e9b0e8022a2327f853c16e185214
     <option name="width" value="2308" />
     <option name="height" value="1351" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -279,13 +321,50 @@
       <workItem from="1537016807015" duration="6125000" />
       <workItem from="1537031345748" duration="7507000" />
       <workItem from="1537061604074" duration="39000" />
+<<<<<<< HEAD
+      <workItem from="1537147858531" duration="3932000" />
+      <workItem from="1537236415595" duration="100000" />
+=======
       <workItem from="1537147858531" duration="3721000" />
+<<<<<<< HEAD
       <workItem from="1537261412173" duration="3222000" />
+=======
+      <workItem from="1537261412173" duration="3041000" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
+>>>>>>> febde0794159e9b0e8022a2327f853c16e185214
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="88777000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="85866000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1280" y="0" width="1280" height="1400" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41545895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.431962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+    <option name="totallyTimeSpent" value="88596000" />
+>>>>>>> febde0794159e9b0e8022a2327f853c16e185214
   </component>
   <component name="ToolWindowManager">
     <frame x="-154" y="294" width="2308" height="1351" extended-state="0" />
@@ -307,6 +386,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,15 +598,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/less/h5.less">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="361">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+=======
         <state relative-caret-position="304">
           <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/h5.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="345">
           <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="448">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <element signature="e#129#635#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="307">
+          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
+>>>>>>> 2990f4ed5c5f49155a7af7a5da50cd988f8c6b9b
+>>>>>>> febde0794159e9b0e8022a2327f853c16e185214
         </state>
       </provider>
     </entry>
