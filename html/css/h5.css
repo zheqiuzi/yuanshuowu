@@ -166,3 +166,26 @@ body {
   top: 0px;
   left: 0px;
 }
+
+
+.scorll-list .icon img{
+  display:block ;
+  width: 84px;
+  height: 84px;
+}
+
+.scorll-list  .title{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 30px 0px 20px 0px;
+  word-wrap:break-word;
+
+}
+.scorll-list  .desc{
+  color: #888;
+  word-wrap:break-word;
+}
+
+.swiper-container{
+  margin-top: 5rem !important;
+}

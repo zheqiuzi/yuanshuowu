@@ -6,9 +6,13 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/h5.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="css/bootstrap/js/bootstrap.js"></script>
     <script src="warpDrive/js/jquery.warpdrive.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+
 
 </head>
 <body>
@@ -70,10 +74,6 @@
         <hr>
     </div>
 
-    <div class="prod-img-wrap">
-        <img src="images/img_003.png"/>
-    </div>
-
 
     <p class="content">星环创世（北京）传媒科技有限公司是由来自区块链先行企业、区块链产业联盟、海归区块链创业者等发起。在整合资源、深化平台建设的基础上，提供基于区块链的深度行业解决方案，从技术、资金、资源、优质项目孵化等多方面全力推动中国区块链行业发展和项目落地，成为通证经济与共识社群践行者。</p>
 
@@ -84,10 +84,6 @@
     <div class="title">
         <p>愿景</p>
         <hr>
-    </div>
-
-    <div class="prod-img-wrap">
-        <img src="images/img_003.png"/>
     </div>
 
 
@@ -102,9 +98,6 @@
         <hr>
     </div>
 
-    <div class="prod-img-wrap">
-        <img src="images/img_003.png"/>
-    </div>
 
 
     <p class="content">定位在创意和科技驱动型区块链传媒科技集团，专注区块链行业社区和创意市场公关服务。</p>
@@ -117,8 +110,79 @@
         <hr>
     </div>
 
-    <div class="prod-img-wrap">
-        <img src="images/img_003.png"/>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide scorll-list">
+                <div class="icon">
+                    <img src="images/pingtai.png">
+                </div>
+                <p class="title">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+                <p class="desc">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+            </div>
+
+            <div class="swiper-slide scorll-list">
+                <div class="icon">
+                    <img src="images/pingtai.png">
+                </div>
+                <p class="title">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+                <p class="desc">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+            </div>
+
+            <div class="swiper-slide scorll-list">
+                <div class="icon">
+                    <img src="images/pingtai.png">
+                </div>
+                <p class="title">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+                <p class="desc">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+            </div>
+
+            <div class="swiper-slide scorll-list">
+                <div class="icon">
+                    <img src="images/pingtai.png">
+                </div>
+                <p class="title">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+                <p class="desc">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+            </div>
+
+            <div class="swiper-slide scorll-list">
+                <div class="icon">
+                    <img src="images/pingtai.png">
+                </div>
+                <p class="title">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+                <p class="desc">
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+
+            </div>
+        </div>
     </div>
 
     <p class="content mb-2rem">区块链为技术基础的内容传播平台</p>
@@ -131,10 +195,6 @@
     <div class="title">
         <p>商业模式</p>
         <hr>
-    </div>
-
-    <div class="prod-img-wrap">
-        <img src="images/img_003.png"/>
     </div>
 
 
@@ -212,6 +272,12 @@
             if(hasClass){
                 $(".navbar-collapse").removeClass("in");
             }
+        });
+
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 3000,//1秒切换一次
+            },
         })
     })
 </script>
